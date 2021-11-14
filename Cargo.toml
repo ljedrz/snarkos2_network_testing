@@ -1,0 +1,17 @@
+[package]
+name = "snarkos2_network_testing"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1"
+bincode = "1.0"
+pea2pea = "0.28"
+snarkos = { path = "../snarkOS" }
+snarkos-ledger = { path = "../snarkOS/ledger" }
+snarkvm = { git = "https://github.com/AleoHQ/snarkVM.git", rev = "e7266f9" }
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.2", features = ["ansi", "chrono", "env-filter", "fmt", "parking_lot", "smallvec"] }
